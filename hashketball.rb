@@ -193,6 +193,7 @@ def big_shoe_rebounds
           if big_shoe < shoe_size(player_name)
               big_shoe = shoe_size(player_name)
               player = player_name
+              binding.pry
           end
         end
       end
