@@ -185,7 +185,16 @@ game_hash.each do |location, team_data|
 end
 
 def big_shoe_rebounds
-  game_hash.each do |location, team_data|
-    return team_data[:players][:shoe_size]
-end
+  biggest = 0
+  rebounds = 0
+  game_hash.each do |home_away, keys|
+    keys[:players].each do |player|
+      size = player[:shoe]
+      if size > biggest
+        biggest = size
+        rebounds = player[:rebounds]
+      end
+    end
+  end
+  rebounds
 end
