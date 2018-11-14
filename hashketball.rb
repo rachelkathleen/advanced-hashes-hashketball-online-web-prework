@@ -125,13 +125,13 @@ def num_points_scored(player_name)
   end
 end
 
-def shoe_size(player_name)
-  game_hash.each do |location, team_data|
-    if team_data[:players].has_key?(player_name)
-      return team_data[:players][player_name][:shoe]
-    end
-  end
-end
+#def shoe_size(player_name)
+#  game_hash.each do |location, team_data|
+#    if team_data[:players].has_key?(player_name)
+#      return team_data[:players][player_name][:shoe]
+#    end
+#  end
+#end
 
 def team_colors(team_name)
   game_hash.collect do |location, team_data|
@@ -193,7 +193,7 @@ def big_shoe_rebounds
           if big_shoe < shoe_size(player_name)
               big_shoe = shoe_size(player_name)
               player = player_name
-              binding.pry
+              
           end
         end
       end
