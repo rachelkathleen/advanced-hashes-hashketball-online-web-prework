@@ -185,14 +185,14 @@ game_hash.each do |location, team_data|
 end
 
 def big_shoe_rebounds
-  largest_shoe = 0
+  big_shoe = 0
   rebounds = 0
   player = ""
-  game_hash.each do |origin, team|
-      team[:players].each do |name, stats|
-          if largest_shoe < shoe_size(name)
-              largest_shoe = shoe_size(name)
-              player = name
+  game_hash.each do |location, team_data|
+      team[:players].each do |player_name, stats|
+          if largest_shoe < shoe_size(player_name)
+              big_shoe = shoe_size(player_name)
+              player = player_name
           end
       end
   end
