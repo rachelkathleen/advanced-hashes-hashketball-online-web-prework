@@ -190,10 +190,13 @@ def big_shoe_rebounds
       if attribute == :players
         values.each do |player_name, stats|
           if stats == :shoe
+        stats.each do |shoe_size_a, shoe_size_b|
+          if shoe_size_a > shoe_size_b
+            return stats[:rebounds]
 
 
-            
-          has_key?
+end
+        end
 end
 
         end
