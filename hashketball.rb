@@ -194,7 +194,7 @@ def big_shoe_rebounds
               big_shoe = shoe_size(player_name)
               player = player_name
           end
+        end
       end
-  end
-  return player_stats(player)[:rebounds]
+      player_stats(player)[:rebounds]
 end
