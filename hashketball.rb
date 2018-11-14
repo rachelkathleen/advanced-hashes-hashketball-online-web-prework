@@ -189,7 +189,7 @@ def big_shoe_rebounds
     team_data.each do |attribute, values|
       if attribute == :players
         values.each do |player_name, stats|
-          if stats == :shoe
+          
             binding.pry
 
           end
